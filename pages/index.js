@@ -6,6 +6,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import Skills from "../components/Skills";
 import Presentation from "../components/Presentation";
+import Alien from "../components/Alien";
 
 import { getSortedPostsData } from "../lib/posts";
 import Introduction from "../components/Introduction";
@@ -22,17 +23,12 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <fr>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <Head></Head>
       <Presentation />
       {/* <Introduction /> */}
+
       <Skills />
+      <Alien />
     </fr>
     // <Layout home>
     //   <Head>

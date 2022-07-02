@@ -1,67 +1,124 @@
 import Image from "next/image";
-import SkillsStyles from "./Skills.module.css";
+import presentationStyles from "./Presentation.module.css";
 function Presentation() {
   return (
     <>
-      <div id="play_btn">
-        <div id="role">
-          <div className="pre-role">I'M </div>FRONT END DEVELOPER
+      <div className={presentationStyles.playBtn}>
+        <div id={presentationStyles.role}>
+          <div className={presentationStyles.preRole}>I'M </div>FRONT END
+          DEVELOPER
         </div>
       </div>
 
-      {/* landscape-night --> */}
-      <div className="landscape-night"></div>
+      {/* landscapeNight --> */}
+      <div className={presentationStyles.landscapeNight}></div>
 
       {/* <!-- BACGROUND FROM  https://codepen.io/pehaa/pen/yLVeLNg--> */}
-      <div className="landscape">
-        <div className="mountain"></div>
-        <div className="mountain mountain-2"></div>
-        <div className="mountain mountain-3"></div>
-        <div className="sun-container sun-container-1"></div>
-        <div className="sun-container">
-          <div className="sun"></div>
-          <div className="title-container">
+      <div className={presentationStyles.landscape}>
+        <div className={presentationStyles.mountain}></div>
+        <div
+          className={`${presentationStyles.mountain} ${presentationStyles.mountain2}`}
+        ></div>
+        <div
+          className={`${presentationStyles.mountain} ${presentationStyles.mountain3}`}
+        ></div>
+        <div
+          className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainer1}`}
+        ></div>
+        <div className={presentationStyles.sunContainer}>
+          <div className={presentationStyles.sun}></div>
+          <div className={presentationStyles.titleContainer}>
             {/* <!-- <h1>TOMÁS</h1>
             <h1>VAN MORLEGAN</h1> --> */}
-            <h1 className="name">Hello! My name is</h1>
+            <h1 className={presentationStyles.name}>Hello! My name is</h1>
             <h1>
-              <span className="last-name">TOMÁS VAN MORLEGAN</span>
+              <span className={presentationStyles.lastName}>
+                TOMÁS VAN MORLEGAN
+              </span>
             </h1>
           </div>
         </div>
-        <div className="cloud"></div>
-        <div className="cloud cloud-1"></div>
-        <div className="sun-container sun-container-reflection">
-          <div className="sun"></div>
+        <div className={presentationStyles.cloud}></div>
+        <div
+          className={`${presentationStyles.cloud} ${
+            presentationStyles.cloud - 1
+          }`}
+        ></div>
+        <div
+          className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainerReflection1}`}
+        >
+          <div className={presentationStyles.sun}></div>
         </div>
-        <div className="light"></div>
-        <div className="light light-1"></div>
-        <div className="light light-2"></div>
-        <div className="light light-3"></div>
-        <div className="light light-4"></div>
-        <div className="light light-5"></div>
-        <div className="light light-6"></div>
-        <div className="light light-7"></div>
-        <div className="water"></div>
-        <div className="splash"></div>
-        <div className="splash delay-1"></div>
-        <div className="splash delay-2"></div>
-        <div className="splash splash-4 delay-2"></div>
-        <div className="splash splash-4 delay-3"></div>
-        <div className="splash splash-4 delay-4"></div>
-        <div className="splash splash-stone delay-3"></div>
-        <div className="splash splash-stone splash-4"></div>
-        <div className="splash splash-stone splash-5"></div>
-        <div className="lotus lotus-1"></div>
-        <div className="lotus lotus-2"></div>
-        <div className="lotus lotus-3"></div>
-        <div className="front">
-          <div className="stone"></div>
-          <div className="grass"></div>
-          <div className="grass grass-1"></div>
-          <div className="grass grass-2"></div>
-          <div className="reed"></div>
-          <div className="reed reed-1"></div>
+        <div className={presentationStyles.light}></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light1}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light2}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light3}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light4}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light5}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light6}`}
+        ></div>
+        <div
+          className={`${presentationStyles.light} ${presentationStyles.light7}`}
+        ></div>
+        <div className={presentationStyles.water}></div>
+        <div className={presentationStyles.splash}></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.delay1}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.delay2}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay2}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay3}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay4}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.delay3}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash4}`}
+        ></div>
+        <div
+          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash5}`}
+        ></div>
+        <div
+          className={`${presentationStyles.lotus} ${presentationStyles.lotus1}`}
+        ></div>
+        <div
+          className={`${presentationStyles.lotus} ${presentationStyles.lotus2}`}
+        ></div>
+        <div
+          className={`${presentationStyles.lotus} ${presentationStyles.lotus3}`}
+        ></div>
+        <div className={presentationStyles.front}>
+          <div className={presentationStyles.stone}></div>
+          <div className={presentationStyles.grass}></div>
+          <div
+            className={`${presentationStyles.grass} ${presentationStyles.grass1}`}
+          ></div>
+          <div
+            className={`${presentationStyles.grass} ${presentationStyles.grass2}`}
+          ></div>
+          <div className={presentationStyles.reed}></div>
+          <div
+            className={`${presentationStyles.reed} ${presentationStyles.reed1}`}
+          ></div>
         </div>
       </div>
     </>
