@@ -40,7 +40,7 @@ img {
   --cloud: #fea798;
 
   --sun_diameter: 20vh;
-  --rise_step_duration: 1s;
+  --rise_step_duration: 3s;
   --name_duration: 5s;
   --sunset_duration: 5s;
   --full_rise_duration: calc(var(--rise_step_duration) * 3);
