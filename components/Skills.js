@@ -1,7 +1,9 @@
-import { useEffect } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import Alien from "./Alien";
 import SkillsStyles from "./Skills.module.css";
 function Skills() {
+  const [showAlien, setShowAlien] = useState(false);
+
   useEffect(() => {
     const mainImgClass = `.${SkillsStyles.mainImg}`;
     const moonImg = document.querySelector("#moonImg");
@@ -10,33 +12,41 @@ function Skills() {
     moonImg.addEventListener("click", () => {
       toggle.classList.toggle(SkillsStyles.active);
     });
+    setShowAlien(true);
   }, []);
 
   return (
-    <div
-      id="home"
-      className={`${SkillsStyles.container} ${SkillsStyles.homeContainer}`}
-    >
-      <div className={SkillsStyles.logo}>
-        <div className={SkillsStyles.mainImg}>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
-          <span className={SkillsStyles.circle}></span>
+    <>
+      <div
+        id="home"
+        className={`${SkillsStyles.container} ${SkillsStyles.homeContainer}`}
+      >
+        <div className={SkillsStyles.logo}>
+          <div className={SkillsStyles.mainImg}>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+            <span className={SkillsStyles.circle}></span>
+          </div>
+          <img
+            id="moonImg"
+            src="/images/moon.png"
+            alt="moon"
+            height={835}
+            width={835}
+          />
         </div>
-        <img
-          id="moonImg"
-          src="/images/moon.png"
-          alt="moon"
-          height={835}
-          width={835}
-        />
+        {showAlien && (
+          <div className={SkillsStyles.skillsAlien}>
+            <Alien />
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 }
 

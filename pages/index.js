@@ -28,7 +28,6 @@ export default function Home({ allPostsData }) {
       {/* <Introduction /> */}
 
       <Skills />
-      <Alien />
     </fr>
     // <Layout home>
     //   <Head>

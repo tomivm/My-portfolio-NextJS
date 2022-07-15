@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .homeContainer .logo {
@@ -140,17 +141,40 @@
   max-width: 40vmin;
   height: auto;
   border-radius: 50%;
-  border: 3px solid rgb(108, 161, 197);
   /* transform: translateY(50vh); */
   opacity: 0;
   visibility: hidden;
   animation: fade-in 6s ease 1 0.5s forwards;
-  animation-delay: calc(var(--full_rise_duration) + 4s);
+  animation-delay: calc(
+    var(--full_rise_duration) + var(--role_reveal_duration)
+  );
 }
 @keyframes fade-in {
   to {
     visibility: visible;
     /* transform: translate(0); */
     opacity: 1;
+  }
+}
+
+.skillsAlien {
+  z-index: 6;
+  position: absolute;
+  transform: translateX(60vw) translateY(-60vh) scale(2.5);
+  visibility: hidden;
+  animation: fade-in-alien 6s ease 1 0.5s forwards;
+  animation-delay: calc(
+    var(--full_rise_duration) + var(--role_reveal_duration)
+  );
+}
+
+@keyframes fade-in-alien {
+  50% {
+    transform: translateX(-25vw) translateY(-70vh) scale(1.7);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(-41vw) translateY(-50vh) scale(0.7);
+    /* transform: translate3d(-50vw, 0, 2em); */
   }
 }

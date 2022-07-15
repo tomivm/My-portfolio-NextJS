@@ -306,7 +306,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   overflow: hidden;
   white-space: nowrap;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--role_size);
 }
 
 .titleContainer > h1:first-of-type {
@@ -611,7 +611,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 /* ROLE TITLE */
 .playBtn {
   z-index: 2;
-  position: absolute;
+  position: fixed;
   /* top: calc(50vh - var(--role_size)); */
   display: flex;
   justify-content: center;
@@ -655,7 +655,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   font-size: var(--role_size);
   display: block;
   /* font-family: "Source Sans Pro", sans-serif; */
-  animation: role-reveal 4000ms ease-in-out forwards 200ms,
+  animation: role-reveal var(--role_reveal_duration) ease-in-out forwards 200ms,
     glow 2500ms linear forwards 2000ms;
   animation-delay: var(--full_rise_duration);
   width: 100vw;

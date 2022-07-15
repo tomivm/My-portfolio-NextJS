@@ -40,10 +40,17 @@ img {
   --cloud: #fea798;
 
   --sun_diameter: 20vh;
-  --rise_step_duration: 3s;
+  --rise_step_duration: 1s;
   --name_duration: 5s;
   --sunset_duration: 5s;
   --full_rise_duration: calc(var(--rise_step_duration) * 3);
+  --role_reveal_duration: 4s;
 
-  --role_size: 1.2rem;
+  --role_size: 1rem;
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    --role_size: 2rem;
+  }
 }

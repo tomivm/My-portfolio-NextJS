@@ -5,7 +5,7 @@
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--role_size);
   font-family: "Courier New";
   border-right: 0.15em solid black;
 
@@ -13,7 +13,8 @@
   overflow: hidden;
   white-space: nowrap;
 
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  animation: typing var(--role_reveal_duration) steps(38) 1s 1 normal both,
+    blink 1s steps(1) infinite;
 }
 
 @keyframes typing {
