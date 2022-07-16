@@ -159,22 +159,24 @@
 
 .skillsAlien {
   z-index: 6;
-  position: absolute;
-  transform: translateX(60vw) translateY(-60vh) scale(2.5);
-  visibility: hidden;
-  animation: fade-in-alien 6s ease 1 0.5s forwards;
+  position: fixed;
+  top: -20vh;
+  left: 100vw;
+  width: 100vw;
+  visibility: visible;
+  animation: fade-in-alien 4s ease 1 0.5s forwards;
   animation-delay: calc(
     var(--full_rise_duration) + var(--role_reveal_duration)
   );
+  overflow: hidden;
 }
 
 @keyframes fade-in-alien {
-  50% {
-    transform: translateX(-25vw) translateY(-70vh) scale(1.7);
+  40% {
+    transform: translate(-40vw, 70vh) scale(2.4) rotate(5deg);
   }
+
   100% {
-    visibility: visible;
-    transform: translateX(-41vw) translateY(-50vh) scale(0.7);
-    /* transform: translate3d(-50vw, 0, 2em); */
+    transform: translate(-100vw, 25vh) scale(1) rotate(0deg);
   }
 }
