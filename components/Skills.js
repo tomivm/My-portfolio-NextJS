@@ -13,7 +13,7 @@ function Skills() {
       console.log("css", animationDelay);
       setTimeout(() => {
         setShowMessage(true);
-      }, 11000);
+      }, 17000);
     };
     const mainImgClass = `.${SkillsStyles.mainImg}`;
     const moonImg = document.querySelector("#moonImg");
