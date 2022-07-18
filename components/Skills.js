@@ -3,8 +3,18 @@ import Alien from "./Alien";
 import SkillsStyles from "./Skills.module.css";
 function Skills() {
   const [showAlien, setShowAlien] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
+    const showAlienMessage = () => {
+      const animationDelay = getComputedStyle(document.body).getPropertyValue(
+        "--all_presentation_duration"
+      ); // #999999
+      console.log("css", animationDelay);
+      setTimeout(() => {
+        setShowMessage(true);
+      }, 11000);
+    };
     const mainImgClass = `.${SkillsStyles.mainImg}`;
     const moonImg = document.querySelector("#moonImg");
     console.log(mainImgClass);
@@ -13,6 +23,7 @@ function Skills() {
       toggle.classList.toggle(SkillsStyles.active);
     });
     setShowAlien(true);
+    showAlienMessage();
   }, []);
 
   return (
@@ -42,7 +53,10 @@ function Skills() {
         </div>
         {showAlien && (
           <div className={SkillsStyles.skillsAlien}>
-            <Alien />
+            <Alien
+              showMessage={showMessage}
+              message={"Click The moon to see my skills!"}
+            />
           </div>
         )}
       </div>

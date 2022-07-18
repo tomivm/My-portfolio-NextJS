@@ -50,6 +50,12 @@ img {
   --role_reveal_duration: 4s;
 
   --role_size: 1rem;
+  --fade_in_alien_duration: 4s;
+
+  --all_presentation_duration: calc(
+    var(--full_rise_duration) + var(--role_reveal_duration) +
+      var(--fade_in_alien_duration)
+  );
 }
 
 @media screen and (min-width: 1080px) {

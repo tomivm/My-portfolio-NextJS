@@ -42,6 +42,12 @@
   }
 }
 
+@keyframes show-message {
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   position: relative;
   display: grid;
@@ -62,12 +68,19 @@
   margin-bottom: 1em;
   margin-left: 0.7em;
   grid-column-start: 2;
+  opacity: 0;
 }
+
 .bubbleText span {
   padding: 1em;
   position: relative;
   border-radius: 0px 10px 10px 10px;
   background-color: var(--s1);
+  transform: translate(0, 0);
+}
+
+.bubbleText[showmessage="true"] {
+  animation: show-message 400ms forwards;
 }
 
 /* Right triangle placed top left. */
