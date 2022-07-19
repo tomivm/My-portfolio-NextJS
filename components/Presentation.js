@@ -28,7 +28,7 @@ function Presentation() {
         <div className={presentationStyles.sunContainer}>
           <div className={presentationStyles.sun}>
             <Image
-              src="/../public/images/tomivm.jpeg"
+              src="/images/tomivm.jpeg"
               layout="fill"
               onLoadingComplete={() => {}}
             />
