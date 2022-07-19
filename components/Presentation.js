@@ -26,7 +26,13 @@ function Presentation() {
           className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainer1}`}
         ></div>
         <div className={presentationStyles.sunContainer}>
-          <div className={presentationStyles.sun}></div>
+          <div className={presentationStyles.sun}>
+            <Image
+              src="/../public/images/tomivm.jpeg"
+              layout="fill"
+              onLoadingComplete={() => {}}
+            />
+          </div>
           <div className={presentationStyles.titleContainer}>
             {/* <!-- <h1>TOMÁS</h1>
             <h1>VAN MORLEGAN</h1> --> */}

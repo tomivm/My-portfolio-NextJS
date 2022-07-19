@@ -75,7 +75,7 @@
   padding: 1em;
   position: relative;
   border-radius: 0px 10px 10px 10px;
-  background-color: var(--s1);
+  background-color: var(--s1pure);
   transform: translate(0, 0);
 }
 
@@ -86,7 +86,6 @@
 /* Right triangle placed top left. */
 
 .bubbleText span::before {
-  mix-blend-mode: color-burn;
   content: " ";
   position: absolute;
   width: 0;
@@ -97,7 +96,7 @@
   bottom: auto;
   box-shadow: none;
   border: 22px solid;
-  border-color: var(--s1) transparent transparent transparent;
+  border-color: var(--s1pure) transparent transparent transparent;
 }
 
 .spaceship {

@@ -224,7 +224,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./../public/images/tomivm.jpeg);
+  /* background: url(./../public/images/tomivm.jpeg); */
+  overflow: hidden;
   background-size: cover;
   border-radius: 50%;
   width: var(--sun_diameter);

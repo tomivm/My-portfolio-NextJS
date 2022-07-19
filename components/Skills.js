@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Alien from "./Alien";
 import SkillsStyles from "./Skills.module.css";
@@ -43,13 +44,16 @@ function Skills() {
             <span className={SkillsStyles.circle}></span>
             <span className={SkillsStyles.circle}></span>
           </div>
-          <img
-            id="moonImg"
-            src="/images/moon.png"
-            alt="moon"
-            height={835}
-            width={835}
-          />
+          <div className={SkillsStyles.moon}>
+            <Image
+              id="moonImg"
+              src="/images/moon.png"
+              alt="moon"
+              layout="fill"
+              // height="835"
+              // width="835"
+            />
+          </div>
         </div>
         {showAlien && (
           <div className={SkillsStyles.skillsAlien}>

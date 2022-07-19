@@ -134,12 +134,14 @@
   transform: translate(-150%, -150%);
 }
 
-.homeContainer img {
+.homeContainer .moon {
   position: absolute;
   z-index: 5;
-  width: 300px;
-  max-width: 40vmin;
-  height: auto;
+  overflow: hidden;
+  width: 40vmin;
+
+  /* max-width: 40vmin; */
+  height: 40vmin;
   border-radius: 50%;
   /* transform: translateY(50vh); */
   opacity: 0;
