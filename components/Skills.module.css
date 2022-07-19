@@ -138,10 +138,8 @@
   position: absolute;
   z-index: 5;
   overflow: hidden;
-  width: 40vmin;
-
-  /* max-width: 40vmin; */
-  height: 40vmin;
+  width: 30vmin;
+  height: 30vmin;
   border-radius: 50%;
   /* transform: translateY(50vh); */
   opacity: 0;
