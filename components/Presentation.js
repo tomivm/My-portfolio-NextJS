@@ -1,8 +1,10 @@
 import Image from "next/image";
 import presentationStyles from "./Presentation.module.css";
-function Presentation() {
+
+function Presentation(props) {
+  const { init } = props;
   return (
-    <>
+    <div className={init ? presentationStyles.start : ""}>
       <div className={presentationStyles.playBtn}>
         <div id={presentationStyles.role}>
           <div className={presentationStyles.preRole}>I'M </div>FRONT END
@@ -127,7 +129,7 @@ function Presentation() {
           ></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

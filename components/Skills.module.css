@@ -144,11 +144,15 @@
   /* transform: translateY(50vh); */
   opacity: 0;
   visibility: hidden;
+}
+
+.start .homeContainer .moon {
   animation: fade-in 6s ease 1 0.5s forwards;
   animation-delay: calc(
     var(--full_rise_duration) + var(--role_reveal_duration)
   );
 }
+
 @keyframes fade-in {
   to {
     visibility: visible;
@@ -164,6 +168,9 @@
   left: 100vw;
   width: 100vw;
   visibility: visible;
+}
+
+.start .skillsAlien {
   animation: fade-in-alien var(--fade_in_alien_duration) ease 1 0.5s forwards;
   animation-delay: calc(
     var(--full_rise_duration) + var(--role_reveal_duration)
@@ -182,10 +189,10 @@
 
 @keyframes fade-in-alien {
   40% {
-    transform: translate(-20vw, 70vh) scale(2.4) rotate(5deg);
+    transform: translate(-20vw, 70vh) scale(2.4);
   }
 
   100% {
-    transform: translate(-100vw, 25vh) scale(1) rotate(0deg);
+    transform: translate(-100vw, 25vh) scale(1);
   }
 }

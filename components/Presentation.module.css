@@ -27,6 +27,9 @@
   width: 100vw;
   z-index: 4;
   background-color: #06013100;
+}
+
+.start .landscapeNight {
   animation: sunset var(--full_rise_duration) forwards;
 }
 
@@ -234,9 +237,12 @@
   left: calc(50% - calc(var(--sun_diameter) / 2));
   top: 100%;
   transform: translate3d(0, 0, 0);
-  animation: rise var(--full_rise_duration) forwards;
+
   box-shadow: 0 0 10px white;
   /* margin: 0.5em; */
+}
+.start .sun {
+  animation: rise var(--full_rise_duration) forwards;
 }
 
 .reed {
@@ -315,13 +321,20 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
                          ID/Class should've been used. 
                          For a small demo 
                          it's okaish for now */
+
+  opacity: 0;
+}
+
+.start .titleContainer > h1:first-of-type {
   animation: showup 7s forwards;
   animation-delay: var(--rise_step_duration);
-  opacity: 0;
 }
 
 .titleContainer > h1:last-of-type {
   width: 0px;
+}
+
+.start .titleContainer > h1:last-of-type {
   animation: reveal 7s forwards;
   animation-delay: var(--rise_step_duration);
 }
@@ -329,6 +342,9 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 .titleContainer > h1:last-of-type span {
   /* margin-left: -355px; */
   font-weight: 600;
+}
+
+.start .titleContainer > h1:last-of-type span {
   animation: slidein 7s forwards;
   animation-delay: var(--rise_step_duration);
 }
@@ -447,8 +463,11 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
     rgba(245, 240, 240, 0.712),
     rgba(2, 9, 37, 0.719)
   );
-  animation: fade var(--rise_step_duration) forwards normal;
   mix-blend-mode: color-burn;
+}
+
+.start .sunContainer1:after {
+  animation: fade var(--rise_step_duration) forwards normal;
 }
 
 @keyframes fade {
@@ -474,6 +493,9 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   opacity: 1;
   top: 0;
   transform: translate3d(0, -20vmin, 0);
+}
+
+.start .sunContainerReflection .sun {
   animation-name: rise-reflection;
 }
 
@@ -485,11 +507,14 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   right: 0;
   margin: auto;
   top: calc(50% + 1vmin);
-  animation: light var(--rise_step_duration) forwards;
   opacity: 0;
   transform: scaleX(0.1) translate3d(0%, 0, 0);
   border-radius: 0.25vh;
   filter: blur(1px);
+}
+
+.start .light {
+  animation: light var(--rise_step_duration) forwards;
 }
 
 @keyframes light {
@@ -511,42 +536,42 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
     transform: scaleX(1) translate3d(-50vw, 0, 0);
   }
 }
-.light1 {
+.start .light1 {
   top: calc(50% + 2vmin);
   animation-delay: 0.5s;
 }
 
-.light2 {
+.start .light2 {
   top: calc(50% + 3vmin);
   width: 18vmin;
   animation-delay: 1s;
 }
 
-.light3 {
+.start .light3 {
   top: calc(50% + 4vmin);
   width: 18vmin;
   animation-delay: 1.5s;
 }
 
-.light4 {
+.start .light4 {
   top: calc(50% + 5vmin);
   width: 16vmin;
   animation-delay: 2s;
 }
 
-.light5 {
+.start .light5 {
   top: calc(50% + 8vmin);
   width: 14vmin;
   animation-delay: 2.5s;
 }
 
-.light6 {
+.start .light6 {
   top: calc(50% + 9vmin);
   width: 10vmin;
   animation-delay: 3s;
 }
 
-.light7 {
+.start .light7 {
   top: calc(50% + 7vmin);
   width: 12vmin;
   animation-delay: 3.5s;
@@ -626,7 +651,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 }
 
 /* lumiinance text animation https://codepen.io/onecastell/pen/VwZWBvr */
-.preRole {
+.start .preRole {
   animation: disapear-pre-role 3500ms forwards 4200ms;
   animation-delay: var(--full_rise_duration);
   opacity: 1;
@@ -656,13 +681,16 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   font-size: var(--role_size);
   display: block;
   /* font-family: "Source Sans Pro", sans-serif; */
-  animation: role-reveal var(--role_reveal_duration) ease-in-out forwards 200ms,
-    glow 2500ms linear forwards 2000ms;
-  animation-delay: var(--full_rise_duration);
   width: 100vw;
   text-align: center;
   opacity: 0;
   font-weight: 700;
+}
+
+.start #role {
+  animation: role-reveal var(--role_reveal_duration) ease-in-out forwards 200ms,
+    glow 2500ms linear forwards 2000ms;
+  animation-delay: var(--full_rise_duration);
 }
 
 @media screen and (min-width: 1080px) {

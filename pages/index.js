@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import { siteTitle } from "../components/layout";
 import Layout from "../components/layout";
@@ -21,13 +22,31 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const [initPresentation, setInitPresentation] = useState(false);
+
+  useEffect(() => {
+    const checkIfVisible = () => {
+      if (document.hidden) return;
+      setInitPresentation(true);
+      document.removeEventListener("visibilitychange", checkIfVisible);
+    };
+    if (document.visibilityState === "visible")
+      return setInitPresentation(true);
+    document.addEventListener("visibilitychange", checkIfVisible);
+  }, []);
+
+  const startPresentation = () => {
+    console.log("represent");
+    setInitPresentation(true);
+  };
+
   return (
     <fr>
       <Head></Head>
-      <Presentation />
+      <Presentation init={initPresentation} />
       {/* <Introduction /> */}
 
-      <Skills />
+      <Skills init={initPresentation} />
     </fr>
     // <Layout home>
     //   <Head>

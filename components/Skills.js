@@ -2,33 +2,35 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Alien from "./Alien";
 import SkillsStyles from "./Skills.module.css";
-function Skills() {
+function Skills({ init }) {
   const [showAlien, setShowAlien] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
-    const showAlienMessage = () => {
-      const animationDelay = getComputedStyle(document.body).getPropertyValue(
-        "--all_presentation_duration"
-      ); // #999999
-      console.log("css", animationDelay);
-      setTimeout(() => {
-        setShowMessage(true);
-      }, 17000);
-    };
-    const mainImgClass = `.${SkillsStyles.mainImg}`;
-    const moonImg = document.querySelector("#moonImg");
-    console.log(mainImgClass);
-    const toggle = document.querySelector(mainImgClass);
-    moonImg.addEventListener("click", () => {
-      toggle.classList.toggle(SkillsStyles.active);
-    });
-    setShowAlien(true);
-    showAlienMessage();
-  }, []);
+    if (init) {
+      const showAlienMessage = () => {
+        const animationDelay = getComputedStyle(document.body).getPropertyValue(
+          "--all_presentation_duration"
+        ); // #999999
+        console.log("css", animationDelay);
+        setTimeout(() => {
+          setShowMessage(true);
+        }, 17000);
+      };
+      const mainImgClass = `.${SkillsStyles.mainImg}`;
+      const moonImg = document.querySelector("#moonImg");
+      console.log(mainImgClass);
+      const toggle = document.querySelector(mainImgClass);
+      moonImg.addEventListener("click", () => {
+        toggle.classList.toggle(SkillsStyles.active);
+      });
+      setShowAlien(true);
+      showAlienMessage();
+    }
+  }, [init]);
 
   return (
-    <>
+    <div className={init ? SkillsStyles.start : ""}>
       <div
         id="home"
         className={`${SkillsStyles.container} ${SkillsStyles.homeContainer}`}
@@ -64,7 +66,7 @@ function Skills() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
