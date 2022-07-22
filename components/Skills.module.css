@@ -196,3 +196,16 @@
     transform: translate(-100vw, 25vh) scale(1);
   }
 }
+
+.start .fadeOutAlien {
+  animation: fade-out-alien 2s forwards;
+}
+
+@keyframes fade-out-alien {
+  0% {
+    transform: translate(-100vw, 25vh) scale(1);
+  }
+  to {
+    transform: translate(-100vw, -20vh);
+  }
+}

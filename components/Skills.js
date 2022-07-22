@@ -18,11 +18,16 @@ function Skills({ init }) {
         }, 17000);
       };
       const mainImgClass = `.${SkillsStyles.mainImg}`;
+
       const moonImg = document.querySelector("#moonImg");
       console.log(mainImgClass);
       const toggle = document.querySelector(mainImgClass);
       moonImg.addEventListener("click", () => {
+        const skillsAlienClass = `.${SkillsStyles.skillsAlien}`;
+        const alien = document.querySelector(skillsAlienClass);
+
         toggle.classList.toggle(SkillsStyles.active);
+        alien.classList.add(SkillsStyles.fadeOutAlien);
       });
       setShowAlien(true);
       showAlienMessage();
