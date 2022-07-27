@@ -1,10 +1,25 @@
 import Image from "next/image";
+import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
 
 function Presentation(props) {
+  const ToSkilssBtn = () => (
+    <div className={presentationStyles.toSkillsContainer}>
+      <div className={presentationStyles.buttonToSkills}>
+        <a href="">
+          <div className={presentationStyles.button}>
+            <span>My Skills</span>
+          </div>
+          <div className={presentationStyles.moonToSkills}></div>
+        </a>
+      </div>
+    </div>
+  );
+
   const { init } = props;
   return (
     <div className={init ? presentationStyles.start : ""}>
+      {/* REFACTOR THIS CAUSES elevated z index on siblings*/}
       <div className={presentationStyles.playBtn}>
         <div id={presentationStyles.role}>
           <div className={presentationStyles.preRole}>I'M </div>FRONT END
@@ -13,7 +28,23 @@ function Presentation(props) {
       </div>
 
       {/* landscapeNight --> */}
-      <div className={presentationStyles.landscapeNight}></div>
+      <div className={`${presentationStyles.landscapeNight}`}>
+        <div className={presentationStyles.presentationAlien}>
+          <Alien />
+        </div>
+
+        <div id={presentationStyles.aboutText} className="wrapper">
+          <h1>About me</h1>
+          <p>
+            Enthusiast Web Developer. Especially interested in JavaScript and
+            CSS.
+            <br /> Always learning and enjoying teamwork. Actually working and
+            collaborating on an Augmentative and Alternative Communication App
+            based on React. 
+          </p>
+        </div>
+        <ToSkilssBtn />
+      </div>
 
       {/* <!-- BACGROUND FROM  https://codepen.io/pehaa/pen/yLVeLNg--> */}
       <div className={presentationStyles.landscape}>

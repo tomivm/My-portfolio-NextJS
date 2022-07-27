@@ -10,6 +10,17 @@ body {
   color: white;
 }
 
+h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+p {
+  font-size: var(--p_font_size);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 /* * {
   box-sizing: border-box;
 }
@@ -51,6 +62,7 @@ img {
   --role_reveal_duration: 4s;
 
   --role_size: 1rem;
+  --p_font_size: 15px;
   --fade_in_alien_duration: 4s;
 
   --all_presentation_duration: calc(
@@ -62,5 +74,31 @@ img {
 @media screen and (min-width: 1080px) {
   body {
     --role_size: 2rem;
+    --p_font_size: 18px;
   }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;
+  grid-column-gap: 32px;
+  grid-template-rows: min-content;
+  width: 100%;
+}
+.wrapper > * {
+  grid-column: 2;
+  text-align: center;
+}
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+h1 {
+  display: block;
+  font-size: var(--role_size);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }

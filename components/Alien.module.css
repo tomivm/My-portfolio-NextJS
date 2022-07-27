@@ -32,13 +32,13 @@
 }
 @keyframes float {
   0% {
-    transform: translate(35px, -8px) rotate(0deg);
+    transform: translate(22px, -8px) rotate(0deg);
   }
   50% {
-    transform: translate(27px, 12px) rotate(0deg);
+    transform: translate(8px, 12px) rotate(0deg);
   }
   100% {
-    transform: translate(7px, -20px) rotate(5deg);
+    transform: translate(4px, -20px) rotate(5deg);
   }
 }
 
@@ -51,14 +51,19 @@
 .container {
   position: relative;
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  width: 100%;
+  height: 80%;
   margin: 1em;
+}
+.alienWithMessage {
+  width: auto;
+  grid-template-columns: 8rem 1fr;
 }
 
 .alien {
   grid-column-start: 1;
-  width: auto;
-  height: auto;
+  width: 90%;
+  height: 90%;
 }
 
 .bubbleText {
@@ -66,7 +71,7 @@
   align-items: flex-start;
   margin-top: 2em;
   margin-bottom: 1em;
-  margin-left: 0.7em;
+  margin-left: 1.7em;
   grid-column-start: 2;
   opacity: 0;
 }

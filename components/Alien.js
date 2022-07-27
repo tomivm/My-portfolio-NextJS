@@ -1,13 +1,18 @@
 //Alien from SVGand css animation explanation post: https://medium.com/helabs/alien-invasions-svgs-and-css-animations-d56c4d757209
 import AlienStyles from "./Alien.module.css";
 export default function Alien(props) {
+  console.log(props.message);
   return (
-    <div className={AlienStyles.container}>
+    <div
+      className={`${AlienStyles.container} ${
+        props.message && AlienStyles.alienWithMessage
+      }`}
+    >
       <div className={AlienStyles.alien}>
         <svg
           className={AlienStyles.spaceship}
           xmlns="http://www.w3.org/2000/svg"
-          viewbox="0 0 109.3 116.8"
+          viewBox="0 0 109.3 116.8"
         >
           <g
             className={`${AlienStyles.leg} ${AlienStyles.leg__4} ${AlienStyles.legMoving}`}
@@ -281,12 +286,14 @@ export default function Alien(props) {
           </g>
         </svg>
       </div>
-      <div
-        showmessage={`${props.showMessage}`}
-        className={AlienStyles.bubbleText}
-      >
-        <span>{props.message}</span>
-      </div>
+      {props.showMessage && (
+        <div
+          showmessage={`${props.showMessage}`}
+          className={AlienStyles.bubbleText}
+        >
+          <span>{props.message}</span>
+        </div>
+      )}
     </div>
   );
 }

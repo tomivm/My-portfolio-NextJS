@@ -46,7 +46,7 @@ export default function Home({ allPostsData }) {
       <Presentation init={initPresentation} />
       {/* <Introduction /> */}
 
-      <Skills init={initPresentation} />
+      {/* <Skills init={initPresentation} /> */}
     </fr>
     // <Layout home>
     //   <Head>

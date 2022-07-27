@@ -23,11 +23,40 @@
 
 .landscapeNight {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 4;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
   background-color: #06013100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.landscapeNight > * {
+  visibility: hidden;
+  /* transform: translate(0); */
+  opacity: 0;
+}
+
+.start .landscapeNight > * {
+  animation: fade-in 6s ease 1 0.5s forwards;
+  animation-delay: calc(
+    var(--full_rise_duration) + var(--role_reveal_duration)
+  );
+}
+
+@keyframes fade-in {
+  to {
+    visibility: visible;
+    /* transform: translate(0); */
+    opacity: 1;
+  }
+}
+
+/* .landscapeNight h1:first-child {
+  margin-top: calc(var(--role_size) + 1em);
+} */
 
 .start .landscapeNight {
   animation: sunset var(--full_rise_duration) forwards;
@@ -41,6 +70,91 @@
     background-color: var(--night-bg-color);
   }
 }
+
+#aboutText {
+  min-height: 30%;
+}
+
+.presentationAlien {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 35vh;
+  max-height: 35vh;
+}
+
+/* MOON button */
+.toSkillsContainer {
+  width: 171px;
+  height: 45px;
+  padding: 1em;
+}
+.buttonToSkills,
+.button,
+.moonToSkills,
+.button span {
+  position: absolute;
+}
+
+.buttonToSkills {
+  margin: auto;
+  width: 171px;
+  height: 200px;
+}
+.buttonToSkills a:hover .moonToSkills {
+  bottom: 176px;
+  transition: all 1s ease-in-out;
+  box-shadow: 0px 0px 10px var(--v2);
+}
+.buttonToSkills a:hover .button {
+  box-shadow: 0px 0px 36px white; /*#c80de0;*/
+  transition: all 1s ease-in-out;
+}
+.buttonToSkills .moonToSkills {
+  width: 45px;
+  height: 45px;
+  left: 62.5px;
+  bottom: 155px;
+  background: linear-gradient(
+    180deg,
+    white 0%,
+    rgb(177, 175, 175) 41.54%
+  ); /*#fb2182*/
+  box-shadow: 0px 0px 36px var(--v2);
+  z-index: 7;
+  border-radius: 45px;
+  transition: all 1s ease-in-out;
+}
+.buttonToSkills .button {
+  width: 171px;
+  height: 45px;
+  background: var(--v4); /* #2c0055;*/
+  box-shadow: 0px 0px 16px var(--v2);
+  border-radius: 1em;
+  z-index: 8;
+  transition: all 1s ease-in-out;
+  /* border-image: linear-gradient(#360154, #d442d5) 30; */
+}
+
+.buttonToSkills .button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  /* font-size: var(); */
+  /* left: 56px; */
+  /* margin: 0 auto; */
+  transition: all 0.3s ease-in-out;
+  background: -webkit-linear-gradient(#f7f7f7, #ffffffd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* /MOON button */
 
 .mountain {
   border-radius: 180% 80% 0% 0%/60vmin 60vmin 0% 0%;
@@ -636,7 +750,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 
 /* ROLE TITLE */
 .playBtn {
-  z-index: 2;
+  pointer-events: none;
   position: fixed;
   /* top: calc(50vh - var(--role_size)); */
   display: flex;
@@ -646,7 +760,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   /* font-size: 40px; */
   width: 100vw;
   height: 100vh;
-  z-index: 5;
+  z-index: 3;
   /* text-align: center; */
 }
 
