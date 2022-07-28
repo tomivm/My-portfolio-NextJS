@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
 
@@ -6,12 +7,14 @@ function Presentation(props) {
   const ToSkilssBtn = () => (
     <div className={presentationStyles.toSkillsContainer}>
       <div className={presentationStyles.buttonToSkills}>
-        <a href="">
-          <div className={presentationStyles.button}>
-            <span>My Skills</span>
-          </div>
-          <div className={presentationStyles.moonToSkills}></div>
-        </a>
+        <Link href="/mySkills">
+          <a>
+            <div className={presentationStyles.button}>
+              <span>My Skills</span>
+            </div>
+            <div className={presentationStyles.moonToSkills}></div>
+          </a>
+        </Link>
       </div>
     </div>
   );

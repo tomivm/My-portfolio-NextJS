@@ -15,7 +15,7 @@ function Skills({ init }) {
         console.log("css", animationDelay);
         setTimeout(() => {
           setShowMessage(true);
-        }, 17000);
+        }, 5000); //17000);
       };
       const mainImgClass = `.${SkillsStyles.mainImg}`;
 

@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: var(--night-bg-color);
 }
 
 .homeContainer .logo {
@@ -157,9 +158,9 @@
 
 .start .homeContainer .moon {
   animation: fade-in 6s ease 1 0.5s forwards;
-  animation-delay: calc(
+  /* animation-delay: calc(
     var(--full_rise_duration) + var(--role_reveal_duration)
-  );
+  ); */
 }
 
 @keyframes fade-in {
@@ -181,9 +182,9 @@
 
 .start .skillsAlien {
   animation: fade-in-alien var(--fade_in_alien_duration) ease 1 0.5s forwards;
-  animation-delay: calc(
+  /* animation-delay: calc(
     var(--full_rise_duration) + var(--role_reveal_duration)
-  );
+  ); */
 }
 /*mobile*/
 /* @keyframes fade-in-alien {
