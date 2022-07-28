@@ -19,7 +19,7 @@ function Presentation(props) {
     </div>
   );
 
-  const { init } = props;
+  const { init, setProfileImageLoaded } = props;
   return (
     <div className={init ? presentationStyles.start : ""}>
       {/* REFACTOR THIS CAUSES elevated z index on siblings*/}
@@ -66,7 +66,7 @@ function Presentation(props) {
             <Image
               src="/images/tomivm.jpeg"
               layout="fill"
-              onLoadingComplete={() => {}}
+              onLoadingComplete={setProfileImageLoaded}
             />
           </div>
           <div className={presentationStyles.titleContainer}>

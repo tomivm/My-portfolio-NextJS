@@ -14,6 +14,10 @@ export async function getStaticProps() {
 
 export default function Home({}) {
   const [initPresentation, setInitPresentation] = useState(false);
+  const [profileImageLoaded, setProfileImageLoaded] = useState(false);
+  const handleImageLoaded = () => {
+    setProfileImageLoaded(true);
+  };
 
   useEffect(() => {
     const checkIfVisible = () => {
@@ -29,7 +33,10 @@ export default function Home({}) {
   return (
     <fr>
       <Head></Head>
-      <Presentation init={initPresentation} />
+      <Presentation
+        init={initPresentation && profileImageLoaded}
+        setProfileImageLoaded={handleImageLoaded}
+      />
     </fr>
   );
 }

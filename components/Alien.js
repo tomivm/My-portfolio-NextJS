@@ -1,7 +1,6 @@
 //Alien from SVGand css animation explanation post: https://medium.com/helabs/alien-invasions-svgs-and-css-animations-d56c4d757209
 import AlienStyles from "./Alien.module.css";
 export default function Alien(props) {
-  console.log(props.message);
   return (
     <div
       className={`${AlienStyles.container} ${
