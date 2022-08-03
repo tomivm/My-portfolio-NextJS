@@ -177,7 +177,7 @@
   top: -20vh;
   left: 100vw;
   width: 100vw;
-  max-height: 20%;
+  /* max-height: 20%; */
   visibility: visible;
   display: flex;
 }

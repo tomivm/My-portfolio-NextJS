@@ -57,7 +57,18 @@
   margin: 1em;
 }
 .alienWithMessage {
-  width: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.alienWithMessage .alien {
+  width: 10%;
+  min-width: 8ch;
+  height: auto;
+  margin-bottom: 3em;
 }
 
 .alien {
@@ -71,9 +82,9 @@
 .bubbleText {
   display: flex;
   align-items: flex-start;
-  margin-top: 2em;
+  /* margin-top: 2em; */
   margin-bottom: 1em;
-  margin-left: 1.7em;
+  margin-left: 1.9em;
   opacity: 0;
 }
 
@@ -86,6 +97,7 @@
 }
 
 .bubbleText[showmessage="true"] {
+  display: flex;
   animation: show-message 400ms forwards;
 }
 
