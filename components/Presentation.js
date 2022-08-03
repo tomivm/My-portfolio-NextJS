@@ -32,135 +32,139 @@ function Presentation(props) {
 
       {/* landscapeNight --> */}
       <div className={`${presentationStyles.landscapeNight}`}>
-        <div className={presentationStyles.presentationAlien}>
-          <Alien />
-        </div>
+        <div className={presentationStyles.alienAndText}>
+          <div className={presentationStyles.presentationAlien}>
+            <Alien />
+          </div>
 
-        <div id={presentationStyles.aboutText} className="wrapper">
-          <h1>About me</h1>
-          <p>
-            Enthusiast Web Developer. Especially interested in JavaScript and
-            CSS.
-            <br /> Always learning and enjoying teamwork. Actually working and
-            collaborating on an Augmentative and Alternative Communication App
-            based on React. 
-          </p>
+          <div id={presentationStyles.aboutText} className="wrapper">
+            <h1>About me</h1>
+            <p>
+              Enthusiast Web Developer. Especially interested in JavaScript and
+              CSS.
+              <br /> Always learning and enjoying teamwork. Actually working and
+              collaborating on an Augmentative and Alternative Communication App
+              based on React. 
+            </p>
+          </div>
         </div>
         <ToSkilssBtn />
       </div>
 
       {/* <!-- BACGROUND FROM  https://codepen.io/pehaa/pen/yLVeLNg--> */}
-      <div className={presentationStyles.landscape}>
-        <div className={presentationStyles.mountain}></div>
-        <div
-          className={`${presentationStyles.mountain} ${presentationStyles.mountain2}`}
-        ></div>
-        <div
-          className={`${presentationStyles.mountain} ${presentationStyles.mountain3}`}
-        ></div>
-        <div
-          className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainer1}`}
-        ></div>
-        <div className={presentationStyles.sunContainer}>
-          <div className={presentationStyles.sun}>
-            <Image
-              src="/images/tomivm.jpeg"
-              layout="fill"
-              onLoadingComplete={setProfileImageLoaded}
-            />
-          </div>
-          <div className={presentationStyles.titleContainer}>
-            {/* <!-- <h1>TOMÁS</h1>
+      <div className={presentationStyles.landscapeContainer}>
+        <div className={presentationStyles.landscape}>
+          <div className={presentationStyles.mountain}></div>
+          <div
+            className={`${presentationStyles.mountain} ${presentationStyles.mountain2}`}
+          ></div>
+          <div
+            className={`${presentationStyles.mountain} ${presentationStyles.mountain3}`}
+          ></div>
+          <div
+            className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainer1}`}
+          ></div>
+          <div className={presentationStyles.sunContainer}>
+            <div className={presentationStyles.sun}>
+              <Image
+                src="/images/tomivm.jpeg"
+                layout="fill"
+                onLoadingComplete={setProfileImageLoaded}
+              />
+            </div>
+            <div className={presentationStyles.titleContainer}>
+              {/* <!-- <h1>TOMÁS</h1>
             <h1>VAN MORLEGAN</h1> --> */}
-            <h1 className={presentationStyles.name}>Hello! My name is</h1>
-            <h1>
-              <span className={presentationStyles.lastName}>
-                TOMÁS VAN MORLEGAN
-              </span>
-            </h1>
+              <h1 className={presentationStyles.name}>Hello! My name is</h1>
+              <h1>
+                <span className={presentationStyles.lastName}>
+                  TOMÁS VAN MORLEGAN
+                </span>
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className={presentationStyles.cloud}></div>
-        <div
-          className={`${presentationStyles.cloud} ${
-            presentationStyles.cloud - 1
-          }`}
-        ></div>
-        <div
-          className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainerReflection1}`}
-        >
-          <div className={presentationStyles.sun}></div>
-        </div>
-        <div className={presentationStyles.light}></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light1}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light2}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light3}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light4}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light5}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light6}`}
-        ></div>
-        <div
-          className={`${presentationStyles.light} ${presentationStyles.light7}`}
-        ></div>
-        <div className={presentationStyles.water}></div>
-        <div className={presentationStyles.splash}></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.delay1}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.delay2}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay2}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay3}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay4}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.delay3}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash4}`}
-        ></div>
-        <div
-          className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash5}`}
-        ></div>
-        <div
-          className={`${presentationStyles.lotus} ${presentationStyles.lotus1}`}
-        ></div>
-        <div
-          className={`${presentationStyles.lotus} ${presentationStyles.lotus2}`}
-        ></div>
-        <div
-          className={`${presentationStyles.lotus} ${presentationStyles.lotus3}`}
-        ></div>
-        <div className={presentationStyles.front}>
-          <div className={presentationStyles.stone}></div>
-          <div className={presentationStyles.grass}></div>
+          <div className={presentationStyles.cloud}></div>
           <div
-            className={`${presentationStyles.grass} ${presentationStyles.grass1}`}
+            className={`${presentationStyles.cloud} ${
+              presentationStyles.cloud - 1
+            }`}
           ></div>
           <div
-            className={`${presentationStyles.grass} ${presentationStyles.grass2}`}
-          ></div>
-          <div className={presentationStyles.reed}></div>
+            className={`${presentationStyles.sunContainer} ${presentationStyles.sunContainerReflection1}`}
+          >
+            <div className={presentationStyles.sun}></div>
+          </div>
+          <div className={presentationStyles.light}></div>
           <div
-            className={`${presentationStyles.reed} ${presentationStyles.reed1}`}
+            className={`${presentationStyles.light} ${presentationStyles.light1}`}
           ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light2}`}
+          ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light3}`}
+          ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light4}`}
+          ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light5}`}
+          ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light6}`}
+          ></div>
+          <div
+            className={`${presentationStyles.light} ${presentationStyles.light7}`}
+          ></div>
+          <div className={presentationStyles.water}></div>
+          <div className={presentationStyles.splash}></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.delay1}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.delay2}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay2}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay3}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splash4} ${presentationStyles.delay4}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.delay3}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash4}`}
+          ></div>
+          <div
+            className={`${presentationStyles.splash} ${presentationStyles.splashstone} ${presentationStyles.splash5}`}
+          ></div>
+          <div
+            className={`${presentationStyles.lotus} ${presentationStyles.lotus1}`}
+          ></div>
+          <div
+            className={`${presentationStyles.lotus} ${presentationStyles.lotus2}`}
+          ></div>
+          <div
+            className={`${presentationStyles.lotus} ${presentationStyles.lotus3}`}
+          ></div>
+          <div className={presentationStyles.front}>
+            <div className={presentationStyles.stone}></div>
+            <div className={presentationStyles.grass}></div>
+            <div
+              className={`${presentationStyles.grass} ${presentationStyles.grass1}`}
+            ></div>
+            <div
+              className={`${presentationStyles.grass} ${presentationStyles.grass2}`}
+            ></div>
+            <div className={presentationStyles.reed}></div>
+            <div
+              className={`${presentationStyles.reed} ${presentationStyles.reed1}`}
+            ></div>
+          </div>
         </div>
       </div>
     </div>

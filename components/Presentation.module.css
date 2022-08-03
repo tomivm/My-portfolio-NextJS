@@ -13,8 +13,17 @@
   right: 0;
 }
 
+.landscapeContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .landscape {
-  height: 100vh;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* height: 100%; */
   background-image: linear-gradient(var(--v1), var(--s1), var(--v1));
   position: relative;
   z-index: 1;
@@ -29,7 +38,7 @@
   background-color: #06013100;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -71,6 +80,14 @@
   }
 }
 
+.alienAndText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
 #aboutText {
   min-height: 30%;
 }
@@ -79,10 +96,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 40%;
   width: 100%;
-  max-width: 35vh;
-  max-height: 35vh;
+  max-width: 100%;
+  max-height: 40%; */
+  width: 20rem;
+  max-width: 100vw;
+  height: auto;
+  max-height: 70%;
+  margin-top: calc(var(--role_size) * 3);
 }
 
 /* MOON button */
@@ -101,10 +123,10 @@
 .buttonToSkills {
   margin: auto;
   width: 171px;
-  height: 200px;
+  height: auto;
 }
 .buttonToSkills a:hover .moonToSkills {
-  bottom: 176px;
+  bottom: -15px;
   transition: all 1s ease-in-out;
   box-shadow: 0px 0px 10px var(--v2);
 }
@@ -116,7 +138,7 @@
   width: 45px;
   height: 45px;
   left: 62.5px;
-  bottom: 155px;
+  bottom: -45px;
   background: linear-gradient(
     180deg,
     white 0%,
@@ -416,7 +438,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   text-align: center;
   /* width: auto; */
   /* height: var(--sun_diameter); */
-  height: 50vh;
+  height: 100%;
   color: white;
   z-index: 3;
 }
@@ -760,7 +782,7 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   /* left: 50vw; */
   /* font-size: 40px; */
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
   /* text-align: center; */
 }
