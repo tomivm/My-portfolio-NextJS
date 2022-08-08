@@ -2,44 +2,46 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Alien from "./Alien";
 import SkillsStyles from "./Skills.module.css";
-function Skills({ init }) {
+function Skills({ moonClicked }) {
   const [showAlien, setShowAlien] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
-    if (init) {
-      const showAlienMessage = () => {
-        const animationDelay = getComputedStyle(document.body).getPropertyValue(
-          "--all_presentation_duration"
-        ); // #999999
-        console.log("css", animationDelay);
-        setTimeout(() => {
-          setShowMessage(true);
-        }, 5000); //17000);
-      };
-      const mainImgClass = `.${SkillsStyles.mainImg}`;
+    const showAlienMessage = () => {
+      const animationDelay = getComputedStyle(document.body).getPropertyValue(
+        "--all_presentation_duration"
+      ); // #999999
+      console.log("css", animationDelay);
+      setTimeout(() => {
+        setShowMessage(true);
+      }, 5000); //17000);
+    };
+    const mainImgClass = `.${SkillsStyles.mainImg}`;
 
-      const moonImg = document.querySelector("#moonImg");
-      console.log(mainImgClass);
-      const toggle = document.querySelector(mainImgClass);
-      moonImg.addEventListener("click", () => {
-        const skillsAlienClass = `.${SkillsStyles.skillsAlien}`;
-        const alien = document.querySelector(skillsAlienClass);
+    const moonImg = document.querySelector("#moonImg");
+    console.log(mainImgClass);
+    const toggle = document.querySelector(mainImgClass);
+    moonImg.addEventListener("click", () => {
+      const skillsAlienClass = `.${SkillsStyles.skillsAlien}`;
+      const alien = document.querySelector(skillsAlienClass);
 
-        toggle.classList.toggle(SkillsStyles.active);
-        alien.classList.add(SkillsStyles.fadeOutAlien);
-      });
-      setShowAlien(true);
-      showAlienMessage();
-    }
-  }, [init]);
+      toggle.classList.toggle(SkillsStyles.active);
+      alien.classList.add(SkillsStyles.fadeOutAlien);
+      moonClicked();
+    });
+    setShowAlien(true);
+    showAlienMessage();
+  }, []);
 
   return (
-    <div className={init ? SkillsStyles.start : ""}>
+    <div className={SkillsStyles.start}>
       <div
         id="home"
         className={`${SkillsStyles.container} ${SkillsStyles.homeContainer}`}
       >
+        <div className="sectionTitle">
+          <h1>My Skills</h1>
+        </div>
         <div className={SkillsStyles.logo}>
           <div className={SkillsStyles.mainImg}>
             <span className={SkillsStyles.circle}></span>

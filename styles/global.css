@@ -79,6 +79,11 @@ img {
   }
 }
 
+.sectionTitle {
+  position: absolute;
+  top: 0.5em;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr min(var(--text-width), calc(100% - 64px)) 1fr;
@@ -102,4 +107,8 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
+.blueBackground {
+  background-color: var(--night-bg-color);
 }

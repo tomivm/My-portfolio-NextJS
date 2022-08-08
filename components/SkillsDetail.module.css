@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+}
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2em;
+  align-items: center;
+}
+.skill {
+  width: 10ch;
+  padding: 2em;
+  text-align: center;
+}
+.skill h3 {
+  font-weight: bold;
+}
+.skill p {
+  text-transform: capitalize;
+}
