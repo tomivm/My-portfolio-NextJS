@@ -31,12 +31,17 @@ export default function Home({}) {
   }, []);
 
   return (
-    <fr>
-      <Head></Head>
+    <div className="content">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+        />
+      </Head>
       <Presentation
         init={initPresentation && profileImageLoaded}
         setProfileImageLoaded={handleImageLoaded}
       />
-    </fr>
+    </div>
   );
 }

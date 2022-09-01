@@ -2,23 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
+import NextSectionBtn from "./NextSectionBtn";
 
 function Presentation(props) {
-  const ToSkilssBtn = () => (
-    <div className={presentationStyles.toSkillsContainer}>
-      <div className={presentationStyles.buttonToSkills}>
-        <Link href="/mySkills">
-          <a>
-            <div className={presentationStyles.button}>
-              <span>My Skills</span>
-            </div>
-            <div className={presentationStyles.moonToSkills}></div>
-          </a>
-        </Link>
-      </div>
-    </div>
-  );
-
   const { init, setProfileImageLoaded } = props;
   return (
     <div className={init ? presentationStyles.start : ""}>
@@ -48,7 +34,7 @@ function Presentation(props) {
             </p>
           </div>
         </div>
-        <ToSkilssBtn />
+        <NextSectionBtn text={"My skills"} href={"/mySkills"} />
       </div>
 
       {/* <!-- BACGROUND FROM  https://codepen.io/pehaa/pen/yLVeLNg--> */}

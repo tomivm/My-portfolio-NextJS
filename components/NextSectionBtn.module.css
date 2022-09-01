@@ -1,0 +1,75 @@
+/* MOON button */
+.nextSectionContainer {
+  /* width: 171px; */
+  height: 20%;
+  /* padding: 2em 1em 1em; */
+  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonnextSection,
+.button,
+.moonnextSection,
+.button span {
+  position: absolute;
+}
+
+.buttonnextSection {
+  margin: auto;
+  width: 171px;
+  height: auto;
+}
+.buttonnextSection a:hover .moonnextSection {
+  bottom: -15px;
+  transition: all 1s ease-in-out;
+  box-shadow: 0px 0px 10px var(--v2);
+}
+.buttonnextSection a:hover .button {
+  box-shadow: 0px 0px 36px white; /*#c80de0;*/
+  transition: all 1s ease-in-out;
+}
+.buttonnextSection .moonnextSection {
+  width: 45px;
+  height: 45px;
+  left: 62.5px;
+  bottom: -45px;
+  background: linear-gradient(
+    180deg,
+    white 0%,
+    rgb(177, 175, 175) 41.54%
+  ); /*#fb2182*/
+  box-shadow: 0px 0px 36px var(--v2);
+  z-index: 7;
+  border-radius: 45px;
+  transition: all 1s ease-in-out;
+}
+.buttonnextSection .button {
+  width: 171px;
+  height: 45px;
+  background: var(--v4); /* #2c0055;*/
+  box-shadow: 0px 0px 16px var(--v2);
+  border-radius: 1em;
+  z-index: 8;
+  transition: all 1s ease-in-out;
+  /* border-image: linear-gradient(#360154, #d442d5) 30; */
+}
+
+.buttonnextSection .button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: var(--p_font_size);
+  /* font-size: var(); */
+  /* left: 56px; */
+  /* margin: 0 auto; */
+  transition: all 0.3s ease-in-out;
+  background: -webkit-linear-gradient(#f7f7f7, #ffffffd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* /MOON button */

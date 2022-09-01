@@ -4,7 +4,7 @@ import detailStyle from "./SkillsDetail.module.css";
 function SkillsDetail() {
   return (
     <div className={`wrapper ${detailStyle.container}`}>
-      <h3>I have knowledge and experience in:</h3>
+      <h2>I have knowledge and experience in:</h2>
       <div className={detailStyle.skillsContainer}>
         <div className={detailStyle.skill}>
           <p>JavaScript</p>

@@ -13,14 +13,17 @@
   right: 0;
 }
 
-.landscapeContainer {
+.landscapeContainer,
+.start {
   position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
 }
 
 .landscape {
   position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
   /* height: 100%; */
@@ -31,15 +34,15 @@
 }
 
 .landscapeNight {
-  position: absolute;
-  height: auto;
-  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 100%;
   width: 100%;
   z-index: 2;
   background-color: #06013100;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -86,10 +89,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-height: 75%;
 }
 
 #aboutText {
+  height: auto;
   min-height: 30%;
+}
+#aboutText > p {
+  height: auto;
+  overflow-y: auto;
+  min-height: 90%;
 }
 
 .presentationAlien {
@@ -101,83 +111,11 @@
   max-width: 100%;
   max-height: 40%; */
   width: 20rem;
-  max-width: 50vmin;
+  max-width: 35vmin;
   height: auto;
   max-height: 50vh;
-  margin-top: calc(var(--role_size) * 3);
+  margin-top: calc(var(--role_size) * 2);
 }
-
-/* MOON button */
-.toSkillsContainer {
-  width: 171px;
-  height: 45px;
-  padding: 2em 1em 1em;
-}
-.buttonToSkills,
-.button,
-.moonToSkills,
-.button span {
-  position: absolute;
-}
-
-.buttonToSkills {
-  margin: auto;
-  width: 171px;
-  height: auto;
-}
-.buttonToSkills a:hover .moonToSkills {
-  bottom: -15px;
-  transition: all 1s ease-in-out;
-  box-shadow: 0px 0px 10px var(--v2);
-}
-.buttonToSkills a:hover .button {
-  box-shadow: 0px 0px 36px white; /*#c80de0;*/
-  transition: all 1s ease-in-out;
-}
-.buttonToSkills .moonToSkills {
-  width: 45px;
-  height: 45px;
-  left: 62.5px;
-  bottom: -45px;
-  background: linear-gradient(
-    180deg,
-    white 0%,
-    rgb(177, 175, 175) 41.54%
-  ); /*#fb2182*/
-  box-shadow: 0px 0px 36px var(--v2);
-  z-index: 7;
-  border-radius: 45px;
-  transition: all 1s ease-in-out;
-}
-.buttonToSkills .button {
-  width: 171px;
-  height: 45px;
-  background: var(--v4); /* #2c0055;*/
-  box-shadow: 0px 0px 16px var(--v2);
-  border-radius: 1em;
-  z-index: 8;
-  transition: all 1s ease-in-out;
-  /* border-image: linear-gradient(#360154, #d442d5) 30; */
-}
-
-.buttonToSkills .button span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  font-weight: 600;
-  font-size: var(--p_font_size);
-  /* font-size: var(); */
-  /* left: 56px; */
-  /* margin: 0 auto; */
-  transition: all 0.3s ease-in-out;
-  background: -webkit-linear-gradient(#f7f7f7, #ffffffd8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* /MOON button */
 
 .mountain {
   border-radius: 180% 80% 0% 0%/60vmin 60vmin 0% 0%;
@@ -373,7 +311,7 @@
   /* left: calc(60% - 10vmin); */
   left: calc(50% - calc(var(--sun_diameter) / 2));
   top: 100%;
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
 
   box-shadow: 0 0 10px white;
   /* margin: 0.5em; */
@@ -563,13 +501,16 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 
 @keyframes rise {
   33% {
-    transform: translate3d(0, -48vh, 20vmin);
+    /* transform: translate3d(0, -40vh, 20vmin); */
+    top: 10%;
   }
   66% {
-    transform: translate3d(0, -48vh, 20vmin);
+    /* transform: translate3d(0, -40vh, 20vmin); */
+    top: 10%;
   }
   100% {
-    transform: translate3d(0, -68vh, 20vmin);
+    /* transform: translate3d(0, -68vh, 20vmin); */
+    top: -30%;
   }
 }
 
@@ -822,12 +763,15 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   text-align: center;
   opacity: 0;
   font-weight: 700;
+  position: absolute;
+  top: calc(50% - var(--role_size));
 }
 
 .start #role {
   animation: role-reveal var(--role_reveal_duration) ease-in-out forwards 200ms,
     glow 2500ms linear forwards 2000ms;
   animation-delay: var(--full_rise_duration);
+  --centered-position: calc(50% - calc(var(--role_size) * 2));
 }
 
 @media screen and (min-width: 1080px) {
@@ -839,17 +783,21 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
 @keyframes role-reveal {
   0% {
     opacity: 1;
+    top: var(--centered-position);
   }
   55% {
     letter-spacing: 5px;
+    top: var(--centered-position);
   }
   70% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    /* transform: translate3d(0, 0, 0); */
+    top: var(--centered-position);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, -49vh, 0);
+    /* transform: translate3d(0, -49vh, 0); */
+    top: calc(0em - var(--role_size));
     background-size: 250% 250%;
   }
 }

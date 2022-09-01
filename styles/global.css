@@ -8,6 +8,18 @@ body {
   line-height: 1.6;
   font-size: 18px;
   color: white;
+  height: 100%;
+  display: block;
+}
+
+body > :first-child,
+.content,
+.content > * {
+  display: block;
+  height: 100%;
+  width: 100%;
+  box-sizing: inherit;
+  margin: 0;
 }
 
 h1 {
@@ -111,4 +123,5 @@ h1 {
 
 .blueBackground {
   background-color: var(--night-bg-color);
+  padding-bottom: 2em;
 }
