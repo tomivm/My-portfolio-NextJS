@@ -100,7 +100,7 @@
 }
 
 .homeContainer .logo .mainImg.active .circle:nth-child(4) {
-  background: url(./../public/images/skills/react-logo.png);
+  background: url(./../public/images/skills/react.png);
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: center;

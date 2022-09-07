@@ -74,6 +74,7 @@ img {
   --role_reveal_duration: 4s;
 
   --role_size: 1rem;
+  --h2_size: 1rem;
   --p_font_size: 15px;
   --fade_in_alien_duration: 4s;
 
@@ -87,6 +88,7 @@ img {
 @media screen and (min-width: 1080px) {
   body {
     --role_size: 2rem;
+    --h2_size: 1.5rem;
     --p_font_size: 18px;
   }
 }
@@ -119,6 +121,11 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
+h2 {
+  font-size: var(--h2_size);
+  margin: 0;
 }
 
 .blueBackground {

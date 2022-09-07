@@ -1,17 +1,21 @@
 .container {
   min-height: 100vh;
 }
+.container h2 {
+  padding-top: 0.5em;
+}
 .skillsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
   align-items: center;
 }
 .skill {
   width: 10ch;
   padding: 2em;
+  padding-top: 0;
   text-align: center;
 }
 .skill h3 {

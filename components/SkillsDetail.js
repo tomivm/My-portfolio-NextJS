@@ -1,5 +1,6 @@
 import Image from "next/image";
 import detailStyle from "./SkillsDetail.module.css";
+import NextSectionBtn from "./NextSectionBtn";
 
 function SkillsDetail() {
   return (
@@ -58,7 +59,7 @@ function SkillsDetail() {
           <p>REACT</p>
           <div>
             <Image
-              src="/images/skills/react-logo.png"
+              src="/images/skills/react.png"
               alt="React"
               layout="responsive"
               width={300}
@@ -103,6 +104,7 @@ function SkillsDetail() {
           </div>
         </div>
       </div>
+      <NextSectionBtn text={"My works"} href={"/projects"} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import Skills from "../components/Skills";
 import SkillsDetail from "../components/SkillsDetail";
-import NextSectionBtn from "../components/NextSectionBtn";
 
 export default function MySkills() {
   const [showSkills, setShowSkills] = useState(false);
@@ -22,7 +21,6 @@ export default function MySkills() {
       {showSkills && (
         <div ref={skillDetailRef}>
           <SkillsDetail />
-          <NextSectionBtn text={"My works"} href={"/myWorks"} />
         </div>
       )}
     </div>
