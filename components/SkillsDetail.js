@@ -104,7 +104,7 @@ function SkillsDetail() {
           </div>
         </div>
       </div>
-      <NextSectionBtn text={"My works"} href={"/projects"} />
+      <NextSectionBtn text={"Projects"} href={"/projects"} />
     </div>
   );
 }
