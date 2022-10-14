@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin, FaWhatsapp, FaDiscord } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import contactStyles from "./contact.module.css";
+import ContactForm from "../components/ContactForm";
+
 export default function Projects() {
   return (
     <div
@@ -50,6 +52,7 @@ export default function Projects() {
             <p>Discord</p>
           </a>
         </div>
+        <ContactForm />
       </div>
     </div>
   );

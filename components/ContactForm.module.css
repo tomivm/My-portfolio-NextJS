@@ -1,0 +1,64 @@
+.emailForm {
+  display: grid;
+  /* flex-direction: column; */
+  align-items: center;
+  text-align: left;
+  width: 27ch;
+  max-width: 100%;
+  margin: auto;
+}
+
+.emailForm > div {
+  display: grid;
+}
+
+.emailForm > * {
+  padding: 1em 0 0.1em 0;
+}
+
+.emailForm h2 {
+  text-align: center;
+}
+
+.emailForm input,
+.emailForm textarea {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  /* max-width: 50ch; */
+}
+
+.emailForm button {
+  background-color: var(--v4);
+  font-size: var(--p_font_size);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border-top-color: var(--v3);
+  border-bottom-color: buttonborder;
+  border-left-color: var(--v3);
+}
+
+.emailForm button {
+  border-right-color: var(--v3);
+  border-bottom-color: var(--v3);
+}
+
+.emailForm button:disabled,
+.emailForm button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.emailForm .succesMessage {
+  padding: 0;
+  text-align: left;
+  grid-template-columns: min-content minmax(min-content, max-content);
+  justify-content: center;
+  align-items: center;
+}
+
+.succesMessage p {
+  font-size: calc(var(--p_font_size) - 20%);
+  width: 90%;
+  margin-left: auto;
+}
