@@ -4,6 +4,7 @@ export default async function (req, res) {
   const EMAIL_ACCOUNT = process.env.mail_account;
   const EMAIL_PASSWORD = process.env.mail_password;
   const transporter = nodemailer.createTransport({
+    host: "142.251.163.108",
     port: 465,
     secure: true,
     service: "gmail",
