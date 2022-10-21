@@ -51,7 +51,7 @@ export default async function (req, res) {
     to: "tomivm98@gmail.com",
     subject: req.body.subject,
     text: req.body.message,
-    // html: <div>{req.body.message}</div>,
+    html: `<div>From: ${req.body.email}</div><br/><div>message: ${req.body.message}</div>`,
   };
 
   if (!accessToken) {
@@ -60,14 +60,23 @@ export default async function (req, res) {
     return console.log("invalid accessToken");
   }
 
-  await transporter.sendMail(mailData, function (err, info) {
-    if (err) {
-      res.status(500);
-      res.send();
-      return console.log(err);
-    }
-    res.status(200);
-    res.send();
-    return;
+  return new Promise((resolve, reject) => {
+    transporter
+      .sendMail(mailData, function (err, info) {
+        if (err) {
+          res.status(500);
+          res.send();
+          reject(new Error());
+          return console.log(err);
+        }
+        res.status(200);
+        res.send();
+        resolve();
+        return;
+      })
+      .catch((error) => {
+        res.status(500);
+        res.send();
+      });
   });
 }
