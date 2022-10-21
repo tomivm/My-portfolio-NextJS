@@ -27,14 +27,6 @@ export default async function (req, res) {
   };
   const accessToken = await getGmailAccessToken();
   const transporter = nodemailer.createTransport({
-    // host: "142.251.163.108",
-    // port: 465,
-    // secure: true,
-    // service: "gmail",
-    // auth: {
-    //   user: EMAIL_ACCOUNT,
-    //   pass: EMAIL_PASSWORD,
-    // },
     service: "gmail",
     auth: {
       type: "OAuth2",
@@ -61,22 +53,17 @@ export default async function (req, res) {
   }
 
   return new Promise((resolve, reject) => {
-    transporter
-      .sendMail(mailData, function (err, info) {
-        if (err) {
-          res.status(500);
-          res.send();
-          reject(new Error());
-          return console.log(err);
-        }
-        res.status(200);
-        res.send();
-        resolve();
-        return;
-      })
-      .catch((error) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) {
         res.status(500);
         res.send();
-      });
+        reject(new Error());
+        return console.log(err);
+      }
+      res.status(200);
+      res.send();
+      resolve();
+      return;
+    });
   });
 }
