@@ -6,6 +6,7 @@
   width: 27ch;
   max-width: 100%;
   margin: auto;
+  padding-bottom: 0.5em;
 }
 
 .emailForm > div {

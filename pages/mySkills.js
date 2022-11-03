@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Navbar from "../components/Navbar";
 import Skills from "../components/Skills";
 import SkillsDetail from "../components/SkillsDetail";
 
@@ -14,15 +15,17 @@ export default function MySkills() {
   };
 
   return (
-    <div className="blueBackground">
-      {/* <Head></Head> */}
-      <Skills moonClicked={handleShowSkills} />
+    <Navbar title={"My Skills"}>
+      <div className="blueBackground">
+        {/* <Head></Head> */}
+        <Skills moonClicked={handleShowSkills} />
 
-      {showSkills && (
-        <div ref={skillDetailRef}>
-          <SkillsDetail />
-        </div>
-      )}
-    </div>
+        {showSkills && (
+          <div style={{ height: "100%" }} ref={skillDetailRef}>
+            <SkillsDetail />
+          </div>
+        )}
+      </div>
+    </Navbar>
   );
 }

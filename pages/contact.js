@@ -2,15 +2,13 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaDiscord } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import contactStyles from "./contact.module.css";
 import ContactForm from "../components/ContactForm";
+import Navbar from "../components/Navbar";
 
 export default function Projects() {
   return (
-    <div
-      className="blueBackground"
-      style={{ minHeight: "100%", paddingBottom: 0 }}
-    >
+    <Navbar title={"Contact"}>
       <div className="wrapper">
-        <h1 className={contactStyles.title}>Contact</h1>
+        <h2>Chat me on:</h2>
         <div className={contactStyles.linksContainer}>
           {/* <a
             aria-label="open Github profile"
@@ -54,6 +52,6 @@ export default function Projects() {
         </div>
         <ContactForm />
       </div>
-    </div>
+    </Navbar>
   );
 }

@@ -1,10 +1,10 @@
 import CardItem from "../components/CardItem";
+import Navbar from "../components/Navbar";
 import NextSectionBtn from "../components/NextSectionBtn";
 export default function Projects() {
   return (
-    <div className="blueBackground">
+    <Navbar title={"Projects"}>
       <div className="wrapper">
-        <h1 style={{ paddingBottom: "1em", paddingTop: "0.5em" }}>Projects</h1>
         <CardItem
           title={"Mater Web Page"}
           description={
@@ -38,10 +38,8 @@ export default function Projects() {
           date={"2022"}
           gitLink={"https://github.com/tomivm/faatra-web/tree/main/src"}
         />
-        <div style={{ paddingTop: "1em" }}>
-          <NextSectionBtn text={"Contact"} href={"/contact"} />
-        </div>
+        <NextSectionBtn text={"Contact"} href={"/contact"} />
       </div>
-    </div>
+    </Navbar>
   );
 }

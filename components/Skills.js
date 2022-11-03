@@ -39,9 +39,9 @@ function Skills({ moonClicked }) {
         id="home"
         className={`${SkillsStyles.container} ${SkillsStyles.homeContainer}`}
       >
-        <div className="sectionTitle">
+        {/* <div className="sectionTitle">
           <h1>My Skills</h1>
-        </div>
+        </div> */}
         <div className={SkillsStyles.logo}>
           <div className={SkillsStyles.mainImg}>
             <span className={SkillsStyles.circle}></span>

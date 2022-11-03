@@ -28,9 +28,9 @@ export default function CardItem({
         <p>{description}</p>
         {resources?.length > 0 && (
           <div className={cardStyle.resources}>
-            {resources.map((resource) => {
+            {resources.map((resource, index) => {
               return (
-                <div className={cardStyle.resource}>
+                <div className={cardStyle.resource} key={index}>
                   <Image
                     src={`/images/skills/${resource}.png`}
                     alt={resource}

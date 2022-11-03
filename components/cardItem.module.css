@@ -4,7 +4,7 @@
   width: auto;
   height: auto;
   padding: 1em;
-  margin-bottom: 2em;
+  margin-top: 1.7em;
   /* background-color: var(--v4); */
   box-shadow: 0px 0px 16px var(--v2);
   border-radius: 1em;
@@ -59,7 +59,6 @@
     width: auto;
     height: auto;
     padding: 1em;
-    background-color: var(--v4);
     box-shadow: 0px 0px 16px var(--v2);
     border-radius: 1em;
   }
