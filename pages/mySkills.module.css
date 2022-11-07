@@ -1,0 +1,7 @@
+.navbarScrollPadding {
+  scroll-margin-top: var(--navbar-height);
+}
+
+.skillDetail {
+  height: 100%;
+}

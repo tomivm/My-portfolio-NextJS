@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import Navbar from "../components/Navbar";
 import Skills from "../components/Skills";
 import SkillsDetail from "../components/SkillsDetail";
+import mySkillsStyles from "./mySkills.module.css";
 
 export default function MySkills() {
   const [showSkills, setShowSkills] = useState(false);
@@ -21,7 +22,10 @@ export default function MySkills() {
         <Skills moonClicked={handleShowSkills} />
 
         {showSkills && (
-          <div style={{ height: "100%" }} ref={skillDetailRef}>
+          <div
+            className={`${mySkillsStyles.navbarScrollPadding} ${mySkillsStyles.skillDetail}`}
+            ref={skillDetailRef}
+          >
             <SkillsDetail />
           </div>
         )}
