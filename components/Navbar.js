@@ -2,10 +2,12 @@ import NavbarStyles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-function Navbar({ children, title }) {
+function Navbar({ children, title, transparentBackground = false }) {
+
+  const navbarClasNames= !transparentBackground ? NavbarStyles.navbar : `${NavbarStyles.navbar} ${NavbarStyles.transparentBackground}`
   return (
     <div className={NavbarStyles.allScreen}>
-      <div className={NavbarStyles.navbar}>
+      <div className={navbarClasNames}>
         <nav
           id="nav"
           className={`${NavbarStyles.nav} ${NavbarStyles.container}`}

@@ -27,6 +27,11 @@
   }
 }
 
+.transparentBackground {
+  box-shadow: none;
+  background-color: transparent;
+}
+
 .container {
   margin: 0 auto;
   width: 90%;
