@@ -3,6 +3,7 @@ import Link from "next/link";
 import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
 import NextSectionBtn from "./NextSectionBtn";
+import Navbar from "./Navbar";
 
 function Presentation(props) {
   const { init, setProfileImageLoaded } = props;
@@ -15,28 +16,28 @@ function Presentation(props) {
           DEVELOPER
         </div>
       </div>
+      <Navbar transparentBackground={true} >
+        {/* landscapeNight --> */}
+        <div className={`${presentationStyles.landscapeNight}`}>
+          <div className={presentationStyles.alienAndText}>
+            <div className={presentationStyles.presentationAlien}>
+              <Alien />
+            </div>
 
-      {/* landscapeNight --> */}
-      <div className={`${presentationStyles.landscapeNight}`}>
-        <div className={presentationStyles.alienAndText}>
-          <div className={presentationStyles.presentationAlien}>
-            <Alien />
+            <div id={presentationStyles.aboutText} className="wrapper">
+              <h1>About me</h1>
+              <p>
+                Enthusiast Web Developer. Especially interested in JavaScript
+                and CSS.
+                <br /> Always learning and enjoying teamwork. Actually working
+                and collaborating on an Augmentative and Alternative
+                Communication App based on React. 
+              </p>
+            </div>
           </div>
-
-          <div id={presentationStyles.aboutText} className="wrapper">
-            <h1>About me</h1>
-            <p>
-              Enthusiast Web Developer. Especially interested in JavaScript and
-              CSS.
-              <br /> Always learning and enjoying teamwork. Actually working and
-              collaborating on an Augmentative and Alternative Communication App
-              based on React. 
-            </p>
-          </div>
+          <NextSectionBtn text={"My skills"} href={"/mySkills"} />
         </div>
-        <NextSectionBtn text={"My skills"} href={"/mySkills"} />
-      </div>
-
+      </Navbar>
       {/* <!-- BACGROUND FROM  https://codepen.io/pehaa/pen/yLVeLNg--> */}
       <div className={presentationStyles.landscapeContainer}>
         <div className={presentationStyles.landscape}>
