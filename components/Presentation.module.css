@@ -797,8 +797,40 @@ animation from https://codepen.io/yemon/pen/dzgmxJ*/
   100% {
     opacity: 1;
     /* transform: translate3d(0, -49vh, 0); */
-    top: calc(0em - var(--role_size));
+    top: calc(-0.275em - var(--role_size));
     background-size: 250% 250%;
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes role-reveal-lg {
+    0% {
+      opacity: 1;
+      top: var(--centered-position);
+      left: 5%;
+    }
+    55% {
+      letter-spacing: 5px;
+      top: var(--centered-position);
+    }
+    70% {
+      opacity: 1;
+      top: var(--centered-position);
+    }
+    100% {
+      opacity: 1;
+      top: calc(-0.28em - var(--role_size));
+      left: 5%;
+      background-size: 250% 250%;
+    }
+  }
+  .start #role {
+    animation: role-reveal-lg var(--role_reveal_duration) ease-in-out forwards
+        200ms,
+      glow 2500ms linear forwards 2000ms;
+    animation-delay: var(--full_rise_duration);
+    --centered-position: calc(50% - calc(var(--role_size) * 2));
+    text-align: start;
   }
 }
 
