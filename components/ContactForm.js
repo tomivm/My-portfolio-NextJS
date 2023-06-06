@@ -1,6 +1,6 @@
 import contactFormStyles from "./ContactForm.module.css";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MdDoneAll, MdReportProblem } from "react-icons/md";
 
 function useIsSubmitable(...args) {
@@ -29,6 +29,9 @@ export default function ContactForm() {
   const [error, setError] = useState(false);
 
   const isSubmitable = useIsSubmitable(fullname, email, subject, message);
+  
+  const scollToSendedState = useRef();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const sendEmail = async () => {
@@ -65,6 +68,7 @@ export default function ContactForm() {
     };
     await sendEmail();
     setSendingMessage(false);
+    scollToSendedState.current.scrollIntoView();
   };
   return (
     <form className={contactFormStyles.emailForm} onSubmit={handleSubmit}>
@@ -125,7 +129,7 @@ export default function ContactForm() {
           Send email
         </button>
       </div>
-      <div className={contactFormStyles.succesMessage}>
+      <div ref={scollToSendedState} className={contactFormStyles.succesMessage}>
         {submitted && !sendingMessage && (
           <>
             <MdDoneAll />
