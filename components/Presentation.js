@@ -62,7 +62,7 @@ function Presentation(props) {
             <div className={presentationStyles.titleContainer}>
               {/* <!-- <h1>TOMÁS</h1>
             <h1>VAN MORLEGAN</h1> --> */}
-              <h1 className={presentationStyles.name}>Hello! My name is</h1>
+              <h1 className={presentationStyles.name}>My name is</h1>
               <h1>
                 <span className={presentationStyles.lastName}>
                   TOMÁS VAN MORLEGAN
