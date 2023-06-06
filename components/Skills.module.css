@@ -32,7 +32,7 @@
 }
 
 .homeContainer .logo .mainImg {
-  /* position: absolute; */
+  position: absolute;
   z-index: 5;
   height: auto;
   width: 90vmin;
