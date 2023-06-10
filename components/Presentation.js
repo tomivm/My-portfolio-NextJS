@@ -4,6 +4,7 @@ import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
 import NextSectionBtn from "./NextSectionBtn";
 import Navbar from "./Navbar";
+import StarsBackground from "./StarsBackGround";
 
 function Presentation(props) {
   const { init, setProfileImageLoaded } = props;
@@ -19,6 +20,7 @@ function Presentation(props) {
       <Navbar transparentBackground={true} >
         {/* landscapeNight --> */}
         <div className={`${presentationStyles.landscapeNight}`}>
+          <StarsBackground />
           <div className={presentationStyles.alienAndText}>
             <div className={presentationStyles.presentationAlien}>
               <Alien />
