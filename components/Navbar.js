@@ -2,6 +2,8 @@ import NavbarStyles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+import StarsBackground from "./StarsBackGround";
+
 function Navbar({ children, title, transparentBackground = false }) {
 
   const navbarClasNames= !transparentBackground ? NavbarStyles.navbar : `${NavbarStyles.navbar} ${NavbarStyles.transparentBackground}`
@@ -68,6 +70,7 @@ function Navbar({ children, title, transparentBackground = false }) {
         </nav>
       </div>
       <div className={NavbarStyles.childrenContainer}>{children}</div>
+      <StarsBackground />
     </div>
   );
 }
