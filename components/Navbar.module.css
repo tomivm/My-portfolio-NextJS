@@ -133,6 +133,7 @@
   flex-wrap: wrap;
   position: relative;
   padding-top: var(--navbar-height);
+  z-index: 2;
   /* transform: var(--state_children_behind); */
 }
 
