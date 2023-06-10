@@ -17,7 +17,7 @@ function Presentation(props) {
           DEVELOPER
         </div>
       </div>
-      <Navbar transparentBackground={true} >
+      <Navbar transparentBackground={true}>
         {/* landscapeNight --> */}
         <div className={`${presentationStyles.landscapeNight}`}>
           <StarsBackground />

@@ -29,7 +29,7 @@ export default function ContactForm() {
   const [error, setError] = useState(false);
 
   const isSubmitable = useIsSubmitable(fullname, email, subject, message);
-  
+
   const scollToSendedState = useRef();
 
   const handleSubmit = async (e) => {

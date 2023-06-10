@@ -5,8 +5,9 @@ import Link from "next/link";
 import StarsBackground from "./StarsBackGround";
 
 function Navbar({ children, title, transparentBackground = false }) {
-
-  const navbarClasNames= !transparentBackground ? NavbarStyles.navbar : `${NavbarStyles.navbar} ${NavbarStyles.transparentBackground}`
+  const navbarClasNames = !transparentBackground
+    ? NavbarStyles.navbar
+    : `${NavbarStyles.navbar} ${NavbarStyles.transparentBackground}`;
   return (
     <div className={NavbarStyles.allScreen}>
       <div className={navbarClasNames}>
