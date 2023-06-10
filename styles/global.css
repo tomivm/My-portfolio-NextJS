@@ -149,7 +149,3 @@ textarea:focus {
   box-shadow: 0px 0px 10px var(--v2);
 }
 
-.blueBackground {
-  background-color: var(--night-bg-color);
-  height: 100%;
-}

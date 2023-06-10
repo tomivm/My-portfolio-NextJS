@@ -17,19 +17,17 @@ export default function MySkills() {
 
   return (
     <Navbar title={"My Skills"}>
-      <div className="blueBackground">
-        {/* <Head></Head> */}
-        <Skills moonClicked={handleShowSkills} />
+      {/* <Head></Head> */}
+      <Skills moonClicked={handleShowSkills} />
 
-        {showSkills && (
-          <div
-            className={`${mySkillsStyles.navbarScrollPadding} ${mySkillsStyles.skillDetail}`}
-            ref={skillDetailRef}
-          >
-            <SkillsDetail />
-          </div>
-        )}
-      </div>
+      {showSkills && (
+        <div
+          className={`${mySkillsStyles.navbarScrollPadding} ${mySkillsStyles.skillDetail}`}
+          ref={skillDetailRef}
+        >
+          <SkillsDetail />
+        </div>
+      )}
     </Navbar>
   );
 }
