@@ -2,7 +2,7 @@ import NavbarStyles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-import StarsBackground from "./StarsBackGround";
+import StarsBackground from "./StarsBackground";
 
 function Navbar({ children, title, transparentBackground = false }) {
   const navbarClasNames = !transparentBackground

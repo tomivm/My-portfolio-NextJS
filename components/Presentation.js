@@ -4,7 +4,7 @@ import Alien from "./Alien";
 import presentationStyles from "./Presentation.module.css";
 import NextSectionBtn from "./NextSectionBtn";
 import Navbar from "./Navbar";
-import StarsBackground from "./StarsBackGround";
+import StarsBackground from "./StarsBackground";
 
 function Presentation(props) {
   const { init, setProfileImageLoaded } = props;
