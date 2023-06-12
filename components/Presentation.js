@@ -13,7 +13,7 @@ function Presentation(props) {
       {/* REFACTOR THIS CAUSES elevated z index on siblings*/}
       <div className={presentationStyles.playBtn}>
         <div id={presentationStyles.role}>
-          <div className={presentationStyles.preRole}>I'M </div>FRONT END
+          <div className={presentationStyles.preRole}>I'M </div>FULL-STACK
           DEVELOPER
         </div>
       </div>
