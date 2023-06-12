@@ -82,7 +82,7 @@ img {
 
   --h2_size: 1rem;
   --p_font_size: 15px;
-  ----large_text_size:1em
+  --large_text_size: 1em;
   --fade_in_alien_duration: 4s;
 
   --all_presentation_duration: calc(
