@@ -8,6 +8,7 @@
   /* background-color: var(--v4); */
   box-shadow: 0px 0px 16px var(--v2);
   border-radius: 1em;
+  background-color: var(--night-bg-color);
 }
 
 .itemImage {
