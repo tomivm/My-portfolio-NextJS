@@ -96,6 +96,11 @@
   height: auto;
   min-height: 30%;
 }
+
+#aboutText > h1 {
+  text-align: left;
+}
+
 #aboutText > p {
   height: auto;
   overflow-y: auto;

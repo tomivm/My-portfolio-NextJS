@@ -28,7 +28,7 @@ function Presentation(props) {
 
             <div id={presentationStyles.aboutText} className="wrapper">
               <h1>About me</h1>
-              <p>
+              <p className="largeText">
                 Enthusiast Web Developer. Especially interested in JavaScript
                 and CSS.
                 <br /> Always learning and enjoying teamwork. Actually working

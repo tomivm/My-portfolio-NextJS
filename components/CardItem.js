@@ -25,7 +25,7 @@ export default function CardItem({
       </div>
       <div className={cardStyle.itemText}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className="largeText">{description}</p>
         {resources?.length > 0 && (
           <div className={cardStyle.resources}>
             {resources.map((resource, index) => {
