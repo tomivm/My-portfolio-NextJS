@@ -26,6 +26,10 @@
   }
 }
 
+.navbarShadow {
+  box-shadow: inset 0px -7.5em 7.9em 0 #060131c2;
+}
+
 .transparentBackground {
   box-shadow: none;
   background-color: transparent;
@@ -71,6 +75,16 @@
 
 .title {
   text-align: center;
+  text-shadow: 0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color);
 }
 
 .hamburguer,
@@ -120,6 +134,16 @@
 .link {
   color: white;
   text-decoration: none;
+  text-shadow: 0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color),
+    0 0 4px var(--night-bg-color), 0 0 4px var(--night-bg-color);
 }
 
 .childrenContainer {

@@ -8,8 +8,11 @@ function Navbar({ children, title, transparentBackground = false }) {
   const navbarClasNames = !transparentBackground
     ? NavbarStyles.navbar
     : `${NavbarStyles.navbar} ${NavbarStyles.transparentBackground}`;
+
+  const navbarShadowClassNames = `${NavbarStyles.navbar} ${NavbarStyles.navbarShadow}`;
   return (
     <div className={NavbarStyles.allScreen}>
+      {!transparentBackground && <div className={navbarShadowClassNames}></div>}
       <div className={navbarClasNames}>
         <nav
           id="nav"
