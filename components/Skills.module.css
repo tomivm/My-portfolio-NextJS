@@ -214,6 +214,17 @@
     transform: translate(-100vw, 25vh) scale(1);
   }
 }
+@media (min-width: 768px) {
+  @keyframes fade-in-alien {
+    40% {
+      transform: translate(-20vw, 70vh) scale(2.4);
+    }
+
+    100% {
+      transform: translate(-100vw, 30vh) scale(1);
+    }
+  }
+}
 
 .start .fadeOutAlien {
   animation: fade-out-alien 2s forwards;
@@ -225,5 +236,16 @@
   }
   to {
     transform: translate(-100vw, -20vh);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes fade-out-alien {
+    0% {
+      transform: translate(-100vw, 30vh) scale(1);
+    }
+    to {
+      transform: translate(-100vw, -20vh);
+    }
   }
 }
