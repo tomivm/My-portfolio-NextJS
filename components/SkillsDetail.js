@@ -14,8 +14,8 @@ function SkillsDetail() {
               src="/images/skills/js.png"
               alt="JavasScript"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -26,8 +26,8 @@ function SkillsDetail() {
               src="/images/skills/css.png"
               alt="Cascading Style Sheets"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -38,8 +38,8 @@ function SkillsDetail() {
               src="/images/skills/html.png"
               alt="HTML"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -50,8 +50,20 @@ function SkillsDetail() {
               src="/images/skills/node.png"
               alt="Node js"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
+            />
+          </div>
+        </div>
+        <div className={detailStyle.skill}>
+          <p>Swagger</p>
+          <div>
+            <Image
+              src="/images/skills/swagger.png"
+              alt="Node js"
+              layout="responsive"
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -62,8 +74,8 @@ function SkillsDetail() {
               src="/images/skills/react.png"
               alt="React"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -74,8 +86,8 @@ function SkillsDetail() {
               src="/images/skills/redux.png"
               alt="Redux"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -86,8 +98,8 @@ function SkillsDetail() {
               src="/images/skills/git.png"
               alt="GIT"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -98,8 +110,32 @@ function SkillsDetail() {
               src="/images/skills/jest.png"
               alt="Jest"
               layout="responsive"
-              width={300}
-              height={300}
+              width={150}
+              height={150}
+            />
+          </div>
+        </div>
+        <div className={detailStyle.skill}>
+          <p>Mocha</p>
+          <div>
+            <Image
+              src="/images/skills/Mocha.png"
+              alt="Jest"
+              layout="responsive"
+              width={150}
+              height={150}
+            />
+          </div>
+        </div>
+        <div className={detailStyle.skill}>
+          <p>Postman</p>
+          <div>
+            <Image
+              src="/images/skills/postman.png"
+              alt="Jest"
+              layout="responsive"
+              width={150}
+              height={150}
             />
           </div>
         </div>
