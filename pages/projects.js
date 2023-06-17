@@ -28,15 +28,37 @@ export default function Projects() {
           gitLink={"https://github.com/cboard-org"}
         />
         <CardItem
+          title={"Cboard API"}
+          description={
+            "This project is the backend for the Cbaord APP. It was a great opportunity to improve my backend skills. I developed new endpoints, validations and tests"
+          }
+          resources={["node", "mocha", "swagger"]}
+          imageSrc={"/images/projects/cboard-api.png"}
+          href={"https://api.app.cboard.io/docs/"}
+          date={"2021-actuallity"}
+          gitLink={"https://github.com/cboard-org/cboard-api"}
+        />
+        <CardItem
           title={"FAATRA Web Page"}
           description={
-            "This Project is a Page to knew FAATRA (an automotive camera). Also it provides the forms to suscribes to FAATRA courses. My work was create web source whit browser native languages from a static dessing. Also i desinged the mobile view. All page is rendered from objects with data provided by a Django backend"
+            "This Project is a Page to know FAATRA (an automotive camera). Also, it provides the forms to subscribe to FAATRA courses. My work was to create web sources whit browser native languages from a static design. Also, I designed the mobile view. All page is rendered from objects with data provided by a Django backend"
           }
           resources={["js", "css", "html"]}
           imageSrc={"/images/projects/faatra.png"}
           href={"https://app.cboard.io"}
           date={"2022"}
           gitLink={"https://github.com/tomivm/faatra-web/tree/main/src"}
+        />
+        <CardItem
+          title={"Matías Sambarino Web Page"}
+          description={
+            "I made some changes on this page like modernizing the gallery, fixing some bugs on align items, and improving the browser compatibility in the future the objective is to design and implement a mobile view. I deploy the changes using Cpanel"
+          }
+          resources={["js", "css", "html"]}
+          imageSrc={"/images/projects/msambarino.png"}
+          href={"https://matiassambarino.com/"}
+          date={"2022"}
+          gitLink={"https://github.com/tomivm/matiassambarino-web"}
         />
         <NextSectionBtn text={"Contact"} href={"/contact"} />
       </div>
