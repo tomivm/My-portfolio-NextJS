@@ -8,7 +8,7 @@ export default function Projects() {
         <CardItem
           title={"Mater Web Page"}
           description={
-            "This project was my first Web development project. It is a web page for a special school of my native city. I started it from a free bootstrap template. Now Im not maintaining it and have some news modifications."
+            "This project was my first Web development project. It is a web page for a special education school in my native city, Córdoba. I started it with a free Bootstrap template. Another person is maintaining it and has new modifications."
           }
           resources={["js", "css", "html"]}
           imageSrc={"/images/projects/mater.png"}
@@ -19,7 +19,7 @@ export default function Projects() {
         <CardItem
           title={"Cboard App"}
           description={
-            "This project is a Augmentative and Alternative Communication APP. It was created by a really important teacher that I hade on my secondary school. I have the oportunity to improove Cboard with some features and bug fixes since 2021. It bring me the oportunity to participate in a real Project."
+            "This project is an Augmentative and Alternative Communication application. It was created by a really important teacher of mine from high school, who had a very big impact on me. I have had the opportunity to participate on improving Cboard with implementing new features and bug fixes since 2021. It allows me to participate in a real project and learn new things."
           }
           resources={["js", "css", "html", "react", "node", "jest", "redux"]}
           imageSrc={"/images/projects/cboard.png"}
@@ -30,7 +30,7 @@ export default function Projects() {
         <CardItem
           title={"Cboard API"}
           description={
-            "This project is the backend for the Cbaord APP. It was a great opportunity to improve my backend skills. I developed new endpoints, validations and tests"
+            "This project is the backend for the Cboard app. It was a great opportunity to improve my backend skills. I developed new endpoints, validations, and tests."
           }
           resources={["node", "mocha", "swagger"]}
           imageSrc={"/images/projects/cboard-api.png"}
@@ -41,7 +41,7 @@ export default function Projects() {
         <CardItem
           title={"FAATRA Web Page"}
           description={
-            "This Project is a Page to know FAATRA (an automotive camera). Also, it provides the forms to subscribe to FAATRA courses. My work was to create web sources whit browser native languages from a static design. Also, I designed the mobile view. All page is rendered from objects with data provided by a Django backend"
+            "This Project is a page to know FAATRA (an automotive camera). And it also provides the forms to subscribe to FAATRA courses. My work consisted in creating web sources with browser native languages from a static design. I also designed the mobile view. All pages are rendered from objects with data provided by a Django backend"
           }
           resources={["js", "css", "html"]}
           imageSrc={"/images/projects/faatra.png"}
@@ -52,7 +52,7 @@ export default function Projects() {
         <CardItem
           title={"Matías Sambarino Web Page"}
           description={
-            "I made some changes on this page like modernizing the gallery, fixing some bugs on align items, and improving the browser compatibility in the future the objective is to design and implement a mobile view. I deploy the changes using Cpanel"
+            "I made some changes on this page like modernizing the gallery, fixing some bugs on align items, and improving the browser compatibility. In the future, the goal is to design and implement a mobile view. I deployed the changes using Cpanel."
           }
           resources={["js", "css", "html"]}
           imageSrc={"/images/projects/msambarino.png"}

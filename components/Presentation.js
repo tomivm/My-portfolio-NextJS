@@ -29,11 +29,12 @@ function Presentation(props) {
             <div id={presentationStyles.aboutText} className="wrapper">
               <h1>About me</h1>
               <p className="largeText">
-                Enthusiast Web Developer. Especially interested in JavaScript
+                Enthusiast Web Developer. Specifically interested in JavaScript
                 and CSS.
-                <br /> Always learning and enjoying teamwork. Actually working
-                and collaborating on an Augmentative and Alternative
-                Communication App based on React. 
+                <br />
+                Always eager to learn and enjoying teamworking. I am currently
+                working on an Augmentative and Alternative Communication App
+                based in React.
               </p>
             </div>
           </div>
